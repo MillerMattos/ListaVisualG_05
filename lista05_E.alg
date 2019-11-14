@@ -7,8 +7,7 @@ Algoritmo "lista05_E"
 Var
 
 valores: vetor [0..4] de real
-resto: real
-i, j: inteiro
+i: inteiro
 
 Inicio
 
@@ -18,13 +17,14 @@ para i de 0 ate 4 faca
 fimpara
 
 para i de 0 ate 4 faca
-  resto<- i mod 2
-  se resto = 1 entao
+  se (i % 2 = 1) entao
     valores[i]<- valores[i]+(valores[i]*(5/100))
     escreva(valores[i])
   senao
-    se resto = 0 entao
+    se (i % 2 = 0) entao
       valores[i]<- valores[i]+(valores[i]*(2/100))
+      escreva(valores[i])
+    senao
       escreva(valores[i])
     fimse
   fimse
